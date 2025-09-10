@@ -1,4 +1,4 @@
-# 🚀 Démarrage rapide - Le Fournil des Fleurs
+# 🚀 Démarrage rapide - TerroirDirect
 
 ## 1. Prérequis
 

@@ -1,4 +1,4 @@
-# 📝 Commit Guidelines - Le Fournil des Fleurs
+# 📝 Commit Guidelines - TerroirDirect
 
 This document defines the commit message conventions for this project to maintain a clean and readable Git history.
 

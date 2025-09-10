@@ -1,4 +1,4 @@
-# Le Fournil des Fleurs
+# TerroirDirect
 
 > Application React avec Vite, TypeScript, et backend Appwrite self-hosted
 
@@ -9,6 +9,7 @@
 ### Installation rapide
 
 1. **Backend Appwrite** (une seule fois) :
+
 ```bash
 docker run -it --rm \
     --volume /var/run/docker.sock:/var/run/docker.sock \
@@ -18,6 +19,7 @@ docker run -it --rm \
 ```
 
 2. **Démarrer les services** :
+
 ```bash
 # Backend Appwrite
 cd appwrite && docker-compose up -d
@@ -27,8 +29,9 @@ cd .. && npm install && npm run dev
 ```
 
 3. **Accéder à l'application** :
-- Frontend: http://localhost:5173
-- Appwrite Console: http://localhost
+
+- Frontend: <http://localhost:5173>
+- Appwrite Console: <http://localhost>
 
 ## 📋 Scripts disponibles
 
@@ -43,23 +46,26 @@ cd .. && npm install && npm run dev
 ## 🏗️ Architecture
 
 ### Frontend (Développement local)
+
 - **React 19** + TypeScript + Vite
 - **Styling**: TailwindCSS + shadcn/ui
 - **Testing**: Vitest + React Testing Library
 - **Code Quality**: Biome (formatage + linting)
-- **Dev Server**: http://localhost:5173
+- **Dev Server**: <http://localhost:5173>
 
 ### Backend (Docker)
+
 - **Appwrite 1.7.4** self-hosted
 - **Base de données**: MariaDB
 - **Cache**: Redis
 - **Proxy**: Traefik
-- **Console**: http://localhost
-- **API**: http://localhost/v1
+- **Console**: <http://localhost>
+- **API**: <http://localhost/v1>
 
 ## 🔧 Développement
 
 ### Commandes Appwrite
+
 ```bash
 cd appwrite
 docker-compose up -d     # Démarrer
@@ -68,6 +74,7 @@ docker-compose logs -f   # Logs
 ```
 
 ### Commandes Frontend
+
 ```bash
 npm run dev       # Développement
 npm run build     # Build production

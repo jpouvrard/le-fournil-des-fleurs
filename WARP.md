@@ -4,7 +4,7 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
 
 ## Project Overview
 
-Le Fournil des Fleurs is a React application built with Vite, TypeScript, and modern tooling. The project uses Appwrite for backend services, TailwindCSS for styling with shadcn/ui components, and follows a layout-based routing architecture with React Router.
+TerroirDirect is a React application built with Vite, TypeScript, and modern tooling. The project uses Appwrite for backend services, TailwindCSS for styling with shadcn/ui components, and follows a layout-based routing architecture with React Router.
 
 ## Development Commands
 
