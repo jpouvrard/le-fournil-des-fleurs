@@ -1,6 +1,6 @@
 {
-    "name": "Starter",
-    "short_name": "Starter",
+    "name": "TerroirDirect",
+    "short_name": "TerroirDirect",
     "icons": [
         {
             "src": "/web-app-manifest-192x192.png",
