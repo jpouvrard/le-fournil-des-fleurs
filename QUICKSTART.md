@@ -10,7 +10,7 @@
 
 ```bash
 git clone <votre-repo>
-cd le-fournil-des-fleurs
+cd terroir-direct
 
 # Installation d'Appwrite (méthode officielle)
 docker run -it --rm \
@@ -38,7 +38,7 @@ docker-compose up -d
 
 1. Ouvrir <http://localhost> dans votre navigateur
 2. Créer un compte administrateur
-3. Créer un projet avec l'ID : `le-fournil-des-fleurs`
+3. Créer un projet avec l'ID : `project-id`
 4. L'application frontend se connectera automatiquement
 
 ## 5. Installation et lancement du frontend

@@ -141,7 +141,7 @@ The application uses React Router's front-end routing system. When implementing 
 2. Follow the interactive setup (use default values for development)
 3. Start Appwrite services: `cd appwrite && docker-compose up -d`
 4. Access Appwrite Console at `http://localhost`
-5. Create your project with ID: `le-fournil-des-fleurs`
+5. Create your project with ID: `project-id`
 
 ### Component Development
 
@@ -178,7 +178,7 @@ The application uses React Router's front-end routing system. When implementing 
 
 1. Access <http://localhost> after starting Appwrite
 2. Create admin account in Appwrite Console
-3. Create project with ID: `le-fournil-des-fleurs`
+3. Create project with ID: `project-id`
 4. Frontend will automatically connect to `http://localhost/v1`
 
 ### Production Deployment
@@ -192,7 +192,7 @@ The application uses React Router's front-end routing system. When implementing 
 
 ```env
 VITE_APPWRITE_ENDPOINT=https://your-domain.com/v1
-VITE_APPWRITE_PROJECT_ID=le-fournil-des-fleurs
+VITE_APPWRITE_PROJECT_ID=project-id
 ```
 
 ## Development Best Practices
@@ -200,6 +200,7 @@ VITE_APPWRITE_PROJECT_ID=le-fournil-des-fleurs
 ### Code Quality Workflow
 
 1. **Before committing**: Run the quality checks
+
    ```bash
    npx tsc --noEmit    # TypeScript check
    npm run lint        # Biome linting
@@ -213,17 +214,20 @@ VITE_APPWRITE_PROJECT_ID=le-fournil-des-fleurs
 ### Common Issues & Solutions
 
 #### TypeScript Errors in Vite Config
+
 - **Issue**: `'test' does not exist in type 'UserConfigExport'`
 - **Solution**: Import `defineConfig` from `vitest/config` instead of `vite`
 
 #### Appwrite Connection Issues
+
 - **Issue**: Frontend can't connect to Appwrite
-- **Solutions**: 
+- **Solutions**:
   - Verify Appwrite is running: `cd appwrite && docker-compose ps`
   - Check project ID matches in `.env` and Appwrite Console
   - Ensure endpoint is `http://localhost/v1` (not port 8080)
 
 #### Development Server Issues
+
 - **Issue**: Vite dev server not accessible
 - **Solution**: Verify configuration uses `host: true` for local network access
 
