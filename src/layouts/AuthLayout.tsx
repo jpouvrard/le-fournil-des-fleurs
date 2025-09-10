@@ -12,7 +12,7 @@ export default function AuthLayout() {
                         width="256"
                         height="256"
                     />
-                    <h2 className="mt-10 text-center font-bold text-2xl/9 text-primary tracking-tight">
+                    <h2 className="mt-4 text-center font-bold text-2xl/9 text-primary tracking-tight">
                         Connectez-vous à votre compte
                     </h2>
                 </div>

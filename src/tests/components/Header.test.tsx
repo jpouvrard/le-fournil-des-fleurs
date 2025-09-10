@@ -20,7 +20,7 @@ describe("Header", () => {
                 </UserContext>
             </MemoryRouter>,
         );
-        const loginButton = screen.getByRole("link", { name: "Login" });
+        const loginButton = screen.getByRole("link", { name: "Connexion" });
         expect(loginButton).toBeInTheDocument();
     });
 
@@ -42,7 +42,7 @@ describe("Header", () => {
                 </UserContext>
             </MemoryRouter>,
         );
-        const logoutButton = screen.getByRole("button", { name: "Logout" });
+        const logoutButton = screen.getByRole("button", { name: "Déconnexion" });
         expect(logoutButton).toBeInTheDocument();
     });
 });

@@ -9,20 +9,19 @@ export default function Header() {
 
     return (
         <header className="flex justify-end gap-5 p-5">
-            {/* <h1>Starter React Appwrite</h1> */}
             {user?.current ? (
                 <>
                     <Button onClick={() => user?.logout()} type="button" variant="outline">
-                        Logout
+                        Déconnexion
                     </Button>
                 </>
             ) : (
                 <div className="flex gap-4">
                     <Button asChild variant="outline">
-                        <Link to="/login">Login</Link>
+                        <Link to="/login">Connexion</Link>
                     </Button>
                     <Button asChild variant="outline">
-                        <Link to="/register">Register</Link>
+                        <Link to="/register">Créer un compte</Link>
                     </Button>
                 </div>
             )}
