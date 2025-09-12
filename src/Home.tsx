@@ -9,7 +9,7 @@ export default function Home() {
                 TerroirDirect
             </h1>
             <Button asChild variant="secondary" size="lg" className="text-xl">
-                <Link to="/login">Connexion au tableau de bord</Link>
+                <Link to="/admin">Accéder au tableau de bord</Link>
             </Button>
         </div>
     );

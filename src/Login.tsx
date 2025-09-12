@@ -1,5 +1,5 @@
-import { useActionState } from "react";
-import { redirect } from "react-router";
+import { useActionState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router";
 
 import { Input } from "@/components/ui/input";
 import { useUser } from "@/lib/context/UserContext";
@@ -8,16 +8,26 @@ import { Label } from "./components/ui/label";
 
 export default function Login() {
     const user = useUser();
+    const navigate = useNavigate();
+    const location = useLocation();
 
-    if (user?.current) {
-        redirect("/");
-    }
+    // Get the page the user was trying to access
+    const from = location.state?.from?.pathname || "/admin";
+
+    // If already logged in, redirect to the intended page or admin
+    useEffect(() => {
+        if (user?.current) {
+            navigate(from, { replace: true });
+        }
+    }, [user?.current, navigate, from]);
 
     const [state, submitAction, isPending] = useActionState(async (_previousState: unknown, formData: FormData) => {
         const email = formData.get("email") as string;
         const password = formData.get("password") as string;
         try {
             await user?.login(email, password);
+            // Redirection vers la page d'origine ou le tableau de bord après connexion réussie
+            navigate(from, { replace: true });
             return null;
         } catch (error) {
             return { error, data: { email, password } };

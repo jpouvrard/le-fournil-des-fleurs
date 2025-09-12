@@ -5,8 +5,10 @@ import App from "@/App.tsx";
 import "@/index.css";
 import Home from "@/Home.tsx";
 import Login from "@/Login.tsx";
+import { ProtectedRoute } from "@/components/ProtectedRoute.tsx";
 import AuthLayout from "@/layouts/AuthLayout.tsx";
 import MainLayout from "@/layouts/MainLayout.tsx";
+import { AdminApp } from "@/pages/AdminApp.tsx";
 
 const router = createBrowserRouter([
     {
@@ -19,6 +21,14 @@ const router = createBrowserRouter([
             {
                 Component: AuthLayout,
                 children: [{ path: "login", Component: Login }],
+            },
+            {
+                path: "admin/*",
+                element: (
+                    <ProtectedRoute>
+                        <AdminApp />
+                    </ProtectedRoute>
+                ),
             },
         ],
     },
